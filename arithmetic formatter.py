@@ -26,4 +26,25 @@ def arithmetic_arranger(problems, show_answers= False):
         if len(first_num) > 4 or len(second_num) > 4:
             return 'Error: Numbers cannot be more than four digits.'
             break
-            
+
+        max_length = max(len(first_num), len(second_num))
+
+        top_line = first_num.rjust(max_length + 2)
+        bottom_line = operator + ' ' + second_num.rjust(max_length)
+        dashes = '-' * (max_length + 2)
+
+        top_lines.append(top_line) 
+        bottom_lines.append(bottom_line)
+        dash_lines.append(dashes)
+
+        if show_answers == True:
+            if operator == '+':
+                result = int(first_num) + int(second_num)
+            if operator == '-':
+                result = int(first_num) - int(second_num)
+
+            result_line = (str(result)).rjust(max_length + 2)
+
+            result_lines.append((result_line))
+
+    arranged_problems = '    '.join(top_lines) + "\n" + '    '.join(bottom_lines) + "\n" + '    '.join(dash_lines)    
