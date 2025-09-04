@@ -48,3 +48,9 @@ def arithmetic_arranger(problems, show_answers= False):
             result_lines.append((result_line))
 
     arranged_problems = '    '.join(top_lines) + "\n" + '    '.join(bottom_lines) + "\n" + '    '.join(dash_lines)    
+    if show_answers:
+        arranged_problems += '\n' + '    '.join(result_lines)
+
+    return arranged_problems
+
+print(f'\n{arithmetic_arranger()}')
