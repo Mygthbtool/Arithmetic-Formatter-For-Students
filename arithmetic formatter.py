@@ -53,4 +53,4 @@ def arithmetic_arranger(problems, show_answers= False):
 
     return arranged_problems
 
-print(f'\n{arithmetic_arranger(["55 + 25"], True)}')
+print(f'\n{arithmetic_arranger(["32 + 698", "3801 - 2", "45 + 43", "123 + 49"], True)}')
